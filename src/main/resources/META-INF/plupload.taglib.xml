@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facelet-taglib xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facelettaglibrary_2_0.xsd"
+	version="2.0">
+	<namespace>http://plupload.com/jsf</namespace>
+
+	<tag>
+		<tag-name>simpleQueue</tag-name>
+		<component>
+			<component-type>com.plupload.SimpleQueue</component-type>
+			<renderer-type>com.plupload.component.SimpleQueueRenderer</renderer-type>
+		</component>
+		<attribute>
+			<description><![CDATA[Unique identifier of the component in a namingContainer.]]></description>
+			<name>id</name>
+			<required>false</required>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description><![CDATA[Boolean value to specify the rendering of the component, when set to false component will not be rendered.]]></description>
+			<name>rendered</name>
+			<required>false</required>
+			<type>java.lang.Boolean</type>
+		</attribute>
+		<attribute>
+			<description><![CDATA[An el expression referring to a server side UIComponent instance in a backing bean.]]></description>
+			<name>binding</name>
+			<required>false</required>
+			<type>javax.faces.component.UIComponent</type>
+		</attribute>
+		<attribute>
+			<description>List of TemporaryFiles.</description>
+			<name>value</name>
+			<required>true</required>
+			<type>java.util.List</type>
+		</attribute>
+		<attribute>
+			<description>Path to the servlet who handles the plupload component.</description>
+			<name>servletPath</name>
+			<required>false</required>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>List of prefered runtimes separated by comma.</description>
+			<name>runtimePreferences</name>
+			<required>false</required>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>Whether to auto start uploading right after file selection.</description>
+			<name>autoStart</name>
+			<required>false</required>
+			<type>java.lang.Boolean</type>
+		</attribute>
+		<attribute>
+			<description>Enable ability to select multiple files at once in file dialog.</description>
+			<name>multiSelection</name>
+			<required>false</required>
+			<type>java.lang.Boolean</type>
+		</attribute>
+		<attribute>
+			<description>Re-activate the widget after each upload procedure.</description>
+			<name>multipleQueues</name>
+			<required>false</required>
+			<type>java.lang.Boolean</type>
+		</attribute>
+		<attribute>
+			<description>Do not let duplicates into the queue. Dispatches 'plupload.FILE_DUPLICATE_ERROR'.</description>
+			<name>preventDuplicates</name>
+			<required>false</required>
+			<type>java.lang.Boolean</type>
+		</attribute>
+		<attribute>
+			<description>Maximum size per file. Client and server side validation.</description>
+			<name>maxFileSize</name>
+			<required>false</required>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>Allowed file extensions separated by comma. Only server-side validation.</description>
+			<name>allowedTypes</name>
+			<required>false</required>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>Width for the image resizing. Image won't be resized if width and height are not specified.</description>
+			<name>resizingWidth</name>
+			<required>false</required>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>Height for the image resizing. Image won't be resized if width and height are not specified.</description>
+			<name>resizingHeight</name>
+			<required>false</required>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>Quality for the image resizing. Image is not necessary resized, if only quality is set, only quality will be changed.</description>
+			<name>resizingQuality</name>
+			<required>false</required>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>Your browser doesn't have Flash, Silverlight, HTML4 or HTML5 support. List of prefered support separated by comma.</description>
+			<name>loadErrorMsg</name>
+			<required>false</required>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>Language used in the component. Examples: pt for portuguese, fr for french, es for spanish.</description>
+			<name>language</name>
+			<required>false</required>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>Id button Submit append upload component. Handle the case when form was submitted before uploading has finished</description>
+			<name>buttonSubmit</name>
+			<required>true</required>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>Id button Cancel append upload component. Handle the case when form was canceled and clear files temps</description>
+			<name>buttonCancel</name>
+			<required>false</required>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<description>Show or hidde Add File button. Default: true</description>
+			<name>showButtonAdd</name>
+			<required>false</required>
+			<type>boolean</type>
+		</attribute>
+		<attribute>
+			<description>Show or hidde Start button. Default: true</description>
+			<name>showButtonStart</name>
+			<required>false</required>
+			<type>java.lang.Boolean</type>
+		</attribute>
+		<attribute>
+			<description>Show or hidde Stop button. Default: true</description>
+			<name>showButtonStop</name>
+			<required>false</required>
+			<type>java.lang.Boolean</type>
+		</attribute>
+		<attribute>
+			<description>Show or hidde Global ProgressBar. Default: true</description>
+			<name>showGlobalProgressBar</name>
+			<required>false</required>
+			<type>java.lang.Boolean</type>
+		</attribute>
+
+	</tag>
+</facelet-taglib>
